@@ -68,7 +68,8 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         
-      echo "::set-output name=status::success"
+      run: |
+        echo "::set-output name=status::success"
         
     - name: Upload bin directory
       uses: actions/upload-artifact@main
